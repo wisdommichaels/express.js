@@ -28,15 +28,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Define routes
 app.get('/', (req, res) => {
-  res.render('home');
+  res.render('Home');
 });
 
-app.get('/services', (req, res) => {
-  res.render('services');
+app.get('/Services', (req, res) => {
+  res.render('Services');
 });
 
-app.get('/contact', (req, res) => {
-  res.render('contact');
+app.get('/Contact', (req, res) => {
+  res.render('Contact');
 });
 
 // Start the server
