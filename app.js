@@ -7,9 +7,9 @@ const port = 3000;
 
 // Middleware to check if current time is within working hours
 app.use((req, res, next) => {
-  const now = new Date(1);
-  const day = now.getDay(5); // 0 (Sunday) to 6 (Saturday)
-  const hour = now.getHours(15); // 0 to 23
+  const now = new Date();
+  const day = now.getDay(); // 0 (Sunday) to 6 (Saturday)
+  const hour = now.getHours(); // 0 to 23
 
   // Check if it's a weekday and within working hours
   if (day >= 1 && day <= 5 && hour >= 9 && hour < 17) {
